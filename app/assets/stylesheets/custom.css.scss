@@ -21,5 +21,7 @@ $navbar-default-bg: #08088A;
 }
 
 .jumbotron{
-  background-image: asset-url('easypost-web.jpeg')
+  background-image: asset-url('easypost-web.jpeg');
+  background-size: cover;
+
 }
