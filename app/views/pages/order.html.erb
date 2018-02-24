@@ -1,8 +1,8 @@
 <script type="text/javascript">
-function submitForm(){
-   const Easypost = require('@easypost/api');
-   const api = new Easypost('<YOUR_TEST/3RIbYwbdP4FpQ9Kqcg83xw>');
+const Easypost = require('@easypost/api');
+const api = new Easypost('<YOUR_TEST/3RIbYwbdP4FpQ9Kqcg83xw>');
 
+function submitForm(){
    const fromAddress = new api.Address({
      company: 'EasyPost',
      street1: '417 Montgomery Street',
@@ -14,6 +14,8 @@ function submitForm(){
    });
 
    fromAddress.save().then(console.log);
+
+   alert("from address company" + fromAddress.Easypost);
 }
 </script>
 <form>
