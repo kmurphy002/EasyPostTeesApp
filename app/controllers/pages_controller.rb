@@ -3,4 +3,6 @@ class PagesController < ApplicationController
   end
   def tracker
   end
+  def ordersubmit
+  end
 end

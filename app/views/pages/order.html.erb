@@ -1,24 +1,4 @@
-<script type="text/javascript">
-function submitForm(){
-   const Easypost = require('@easypost/api');
-   const api = new Easypost('<YOUR_TEST/3RIbYwbdP4FpQ9Kqcg83xw>');
-
-   const fromAddress = new api.Address({
-     company: 'EasyPost',
-     street1: '417 Montgomery Street',
-     street2: '5th Floor',
-     city: 'San Francisco',
-     state: 'CA',
-     zip: '94104',
-     phone: '415-528-7555'
-   });
-
-   fromAddress.save().then(console.log);
-
-   alert("from address company" + fromAddress.company);
-}
-</script>
-<form>
+<%= form_for @page do |p| %>
 <div class="input-group">
   <span class="input-group-addon" id="basic-addon1">Name</span>
   <input type="text" class="form-control" placeholder="Full Name" aria-describedby="basic-addon1">
@@ -50,4 +30,4 @@ function submitForm(){
 </div>
 
 <button type="submit" class="btn btn-default", onclick="submitForm()">Submit</button>
-</form>
+<% end %>
