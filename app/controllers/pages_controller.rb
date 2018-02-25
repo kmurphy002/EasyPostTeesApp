@@ -4,5 +4,6 @@ class PagesController < ApplicationController
   def tracker
   end
   def ordersubmit
+    @page = Page.new
   end
 end
