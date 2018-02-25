@@ -1,9 +1,7 @@
 class PagesController < ApplicationController
   def order
+    @page = Page.new
   end
   def tracker
-  end
-  def ordersubmit
-    @page = Page.new
   end
 end
