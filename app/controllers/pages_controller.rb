@@ -4,4 +4,7 @@ class PagesController < ApplicationController
   end
   def tracker
   end
+  def pages
+    @page = Page.new
+  end
 end
