@@ -1,3 +1,7 @@
-class Page < ActiveRecord::Base
-
+class Page
+  extend ActiveModel::Naming
+  include ActiveModel::Conversion
+  def persisted?
+    false
+  end
 end
