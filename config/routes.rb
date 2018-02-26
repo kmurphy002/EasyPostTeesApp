@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   get 'about', to: 'welcome#about'
   get 'ordertee', to: 'pages#order'
   get 'trackertee', to: 'pages#tracker'
-  post 'pages', to: 'pages#pages'
+  get 'pages', to: 'pages#pages'
 end
