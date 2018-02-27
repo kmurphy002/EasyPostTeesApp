@@ -4,4 +4,7 @@ class Shipment
   def persisted?
     false
   end
+
+  def title
+  end
 end
