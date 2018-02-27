@@ -5,6 +5,21 @@ class Shipment
     false
   end
 
-  def title
+  def name
+  end
+
+  def company
+  end
+
+  def address
+  end
+
+  def city
+  end
+
+  def state
+  end
+
+  def zip
   end
 end

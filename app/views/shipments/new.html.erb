@@ -2,7 +2,35 @@
 
 <%= form_for @shipment do |f| %>
 <p>
-  <%= f.label :title %></br>
-  <%= f.text_field :title %>
+  <%= f.label :name %></br>
+  <%= f.text_field :name %>
 </p>
+
+<p>
+  <%= f.label :company %></br>
+  <%= f.text_field :company %>
+</p>
+
+<p>
+  <%= f.label :address %></br>
+  <%= f.text_field :address %>
+</p>
+
+<p>
+  <%= f.label :city %></br>
+  <%= f.text_field :city %>
+</p>
+
+<p>
+  <%= f.label :state %></br>
+  <%= f.text_field :state %>
+</p>
+
+<p>
+  <%= f.label :zip %></br>
+  <%= f.text_field :zip %>
+</p>
+
+<%= f.submit %>
+
 <% end %>
