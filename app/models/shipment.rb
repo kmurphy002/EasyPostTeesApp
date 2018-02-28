@@ -41,38 +41,3 @@ class Shipment
     @zip = shipment_params[:zip]
   end
 end
-
-class Shipment
-  extend ActiveModel::Naming
-  include ActiveModel::Conversion
-  def persisted?
-    false
-  end
-
-  def name
-    @name = ""
-  end
-
-  def company
-    @company = ""
-  end
-
-  def address
-    @address = ""
-  end
-
-  def city
-    @city = ""
-  end
-
-  def state
-    @state = ""
-  end
-
-  def zip
-    @zip = ""
-  end
-
-  def initialize()
-  end
-end
