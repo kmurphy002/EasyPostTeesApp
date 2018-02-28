@@ -29,6 +29,9 @@ class Shipment
     @zip = ""
   end
 
+  def initialize()
+  end
+  
   def initialize(shipment_params)
     @name = shipment_params[:name]
     @company = shipment_params[:company]
