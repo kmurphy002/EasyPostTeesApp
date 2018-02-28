@@ -52,7 +52,7 @@ class Shipment
 
   def do_shipment
     require 'easypost'
-    EasyPost.api_key = "<3RIbYwbdP4FpQ9Kqcg83xw>"
+    EasyPost.api_key = "3RIbYwbdP4FpQ9Kqcg83xw"
 
     fromAddress = EasyPost::Address.create(
       company: 'EasyPost',
