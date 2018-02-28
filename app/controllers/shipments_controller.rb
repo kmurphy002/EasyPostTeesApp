@@ -8,7 +8,7 @@ class ShipmentsController < ApplicationController
     redirect_to shipment_path(@shipment)
   end
 
-  def show
+  def show shipment
     @shipment = Shipment.find(params[:id])
   end
 
