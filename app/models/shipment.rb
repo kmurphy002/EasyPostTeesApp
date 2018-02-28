@@ -1,3 +1,4 @@
+require 'easypost'
 class Shipment
   extend ActiveModel::Naming
   include ActiveModel::Conversion
@@ -51,7 +52,6 @@ class Shipment
   end
 
   def do_shipment
-    require 'easypost'
     EasyPost.api_key = "3RIbYwbdP4FpQ9Kqcg83xw"
 
     fromAddress = EasyPost::Address.create(
