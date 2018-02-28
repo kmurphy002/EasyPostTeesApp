@@ -80,8 +80,6 @@ class Shipment
       from_address: fromAddress,
       parcel: parcel
     )
-    shipment.buy(
-      rate: shipment.lowest_rate(carriers = ['USPS'], services = ['First'])
-    )
+    shipment.buy(rate: {id: '{RATE_ID}'})
   end
 end
