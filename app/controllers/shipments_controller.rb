@@ -4,7 +4,7 @@ class ShipmentsController < ApplicationController
   end
 
   def create
-    @shipment = Shipment.new_with_config(shipment_params)
+    @shipment = Shipment.new_with_params(shipment_params)
     redirect_to shipments_path(@shipment)
   end
 
