@@ -5,6 +5,7 @@ class ShipmentsController < ApplicationController
 
   def create
     @shipment = Shipment.new_with_params(shipment_params)
+    @shipment.do_shipment()
     redirect_to root_path()
   end
 

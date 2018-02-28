@@ -1,6 +1,7 @@
 class Shipment
   extend ActiveModel::Naming
   include ActiveModel::Conversion
+
   def persisted?
     false
   end
@@ -49,4 +50,38 @@ class Shipment
     forerunner
   end
 
+  def do_shipment
+    require 'easypost'
+    EasyPost.api_key = "<YOUR_TEST/3RIbYwbdP4FpQ9Kqcg83xw>"
+
+    fromAddress = EasyPost::Address.create(
+      company: 'EasyPost',
+      street1: '417 Montgomery Street',
+      street2: '5th Floor',
+      city: 'San Francisco',
+      state: 'CA',
+      zip: '94104',
+      phone: '415-528-7555'
+    )
+    toAddress = EasyPost::Address.create(
+      name: @name,
+      company: @company,
+      street1: @address,
+      city: @city,
+      state: @state,
+      zip: @zip
+    )
+    parcel = EasyPost::Parcel.create(
+      predefined_package: 'FlatRateEnvelope',
+      weight: 10
+    )
+    shipment = EasyPost::Shipment.create(
+      to_address: toAddress,
+      from_address: fromAddress,
+      parcel: parcel
+    )
+    shipment.buy(
+      rate: shipment.lowest_rate(carriers = ['USPS'], services = ['First'])
+    )
+  end
 end
