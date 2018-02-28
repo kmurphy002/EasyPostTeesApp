@@ -32,7 +32,12 @@ class Shipment
   def initialize()
   end
 
-  def initialize(shipment_params = nil)
+  def initialize
+
+  end
+
+  def initialize_with_shipment_params shipment_params
+    initialize
     @name = shipment_params[:name]
     @company = shipment_params[:company]
     @address = shipment_params[:address]
@@ -40,4 +45,11 @@ class Shipment
     @state = shipment_params[:state]
     @zip = shipment_params[:zip]
   end
+
+  def self.new_with_params shipment_params
+    forerunner = allocate
+    forerunner.send(:initialize_with_shipment_params, shipment_params)
+    forerunner
+  end
+
 end
