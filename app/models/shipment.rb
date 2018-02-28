@@ -34,22 +34,6 @@ class Shipment
 
   end
 
-  def fromAddress
-    @fromAddress = ""
-  end
-
-  def toAddress
-    @toAddress = ""
-  end
-
-  def parcel
-    @parcel = ""
-  end
-
-  def shipment
-    @shipment = ""
-  end
-
   def initialize_with_shipment_params shipment_params
     initialize
     @name = shipment_params[:name]
@@ -68,7 +52,7 @@ class Shipment
 
   def do_shipment
     require 'easypost'
-    EasyPost.api_key = "<YOUR_TEST/3RIbYwbdP4FpQ9Kqcg83xw>"
+    EasyPost.api_key = "<YOUR_TEST/U4nSysFkp7M0utjCQomqGw>"
 
     fromAddress = EasyPost::Address.create(
       company: 'EasyPost',
