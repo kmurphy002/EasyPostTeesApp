@@ -1,6 +1,6 @@
 class ShipmentsController < ApplicationController
   def new
-    @shipment = Shipment.new
+    @shipment = Shipment.new(shipment_params)
   end
 
   def create
