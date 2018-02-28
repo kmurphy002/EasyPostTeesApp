@@ -29,9 +29,6 @@ class Shipment
     @zip = ""
   end
 
-  def initialize()
-  end
-
   def initialize
 
   end

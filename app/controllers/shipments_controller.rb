@@ -8,10 +8,6 @@ class ShipmentsController < ApplicationController
     redirect_to root_path()
   end
 
-  def show
-
-  end
-
   private
   def shipment_params
     params.require(:shipment).permit(:name, :company, :address, :city, :state, :zip)
