@@ -1,5 +1,6 @@
 class ShipmentsController < ApplicationController
   def new
+    @shipment = Shipment.new
   end
 
   def create
@@ -8,7 +9,7 @@ class ShipmentsController < ApplicationController
   end
 
   def show
-    @shipment = Shipment.new(params[:id])
+    @shipment = Shipment.find(params[:id])
   end
 
   private
