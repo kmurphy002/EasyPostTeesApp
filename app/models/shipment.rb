@@ -80,6 +80,6 @@ class Shipment
       from_address: fromAddress,
       parcel: parcel
     )
-    shipment.buy(rate: {id: '{RATE_ID}'})
+    shipment.buy(rate: shipment.rates.first)
   end
 end
