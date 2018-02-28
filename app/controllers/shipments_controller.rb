@@ -5,8 +5,7 @@ class ShipmentsController < ApplicationController
 
   def create
     @shipment = Shipment.new_with_params(shipment_params)
-    @ship = Shipment.new
-    redirect_to shipment_path(@ship)
+    redirect_to shipment_path(@shipment, params[:id])
   end
 
   def show
