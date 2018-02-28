@@ -47,7 +47,7 @@ class Shipment
   end
 
   def shipment
-    @shipment ""
+    @shipment = ""
   end
 
   def initialize_with_shipment_params shipment_params
