@@ -32,7 +32,7 @@ class Shipment
   def initialize()
   end
 
-  def initialize(shipment_params)
+  def initialize(shipment_params = nil)
     @name = shipment_params[:name]
     @company = shipment_params[:company]
     @address = shipment_params[:address]
