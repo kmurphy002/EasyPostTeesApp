@@ -4,7 +4,6 @@ class ShipmentsController < ApplicationController
   end
 
   def create
-    render plain: params[:shipment].inspect
     @shipment = Shipment.new(shipment_params)
     redirect_to shipments_path(@shipment)
   end
