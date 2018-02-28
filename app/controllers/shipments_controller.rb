@@ -1,6 +1,5 @@
 class ShipmentsController < ApplicationController
   def new
-    @shipment = Shipment.new(shipment_params)
   end
 
   def create
@@ -16,4 +15,5 @@ class ShipmentsController < ApplicationController
   def shipment_params
     params.require(:shipment).permit(:name, :company, :address, :city, :state, :zip)
   end
+
 end
