@@ -10,8 +10,8 @@ class Shipment
 
   attr_accessor :name, :company, :address, :city, :state, :zip
 
-  validates :name, :company, :address, :city, :state, :zip, allow_blank = false
-  
+  validates :name, :company, :address, :city, :state, :zip, allow_blank: false
+
   def initialize
 
   end
