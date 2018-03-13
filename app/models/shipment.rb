@@ -13,6 +13,7 @@ class Shipment
   attr_reader   :errors
 
   validates :name, presence: true
+  validates :company, presence: true
 
   def initialize
 
