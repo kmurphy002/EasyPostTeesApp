@@ -7,11 +7,9 @@ class ShipmentsController < ApplicationController
     @shipment = Shipment.new_with_params(shipment_params)
     @isNameValid = @shipment.valid?
 
-    if(@isNameValid == true){
+    if @isNameValid == true
        @shipment.do_shipment()
-    } else {
-
-    }
+    end
 
 
 
