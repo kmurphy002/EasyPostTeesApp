@@ -7,11 +7,11 @@ class ShipmentsController < ApplicationController
     @shipment = Shipment.new_with_params(shipment_params)
     @shipment.validates_each
 
-    if(@shipment.errors.any?){
+  
 
-    } else {
+
           @shipment.do_shipment()
-    }
+
     redirect_to root_path()
   end
 
