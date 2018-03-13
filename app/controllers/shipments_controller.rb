@@ -5,8 +5,9 @@ class ShipmentsController < ApplicationController
 
   def create
     @shipment = Shipment.new_with_params(shipment_params)
+    @shipment.validates_each?
 
-    if(@shipment.errors.any?){
+    if(@shipment.error.any?){
       render 'new'
     } else {
       @shipment.do_shipment()
