@@ -9,31 +9,9 @@ class Shipment
   end
 
   attr_accessor :name, :company, :address, :city, :state, :zip
-=begin
-  def name
-    @name = ""
-  end
 
-  def company
-    @company = ""
-  end
-
-  def address
-    @address = ""
-  end
-
-  def city
-    @city = ""
-  end
-
-  def state
-    @state = ""
-  end
-
-  def zip
-    @zip = ""
-  end
-=end
+  validates :name, :company, :address, :city, :state, :zip, allow_blank = false
+  
   def initialize
 
   end
