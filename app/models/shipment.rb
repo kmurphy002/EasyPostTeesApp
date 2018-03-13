@@ -4,12 +4,14 @@ class Shipment
   include ActiveModel::Conversion
   include ActiveModel::Model
   include ActiveModel::Validations
+  include ActiveModel::Translations
 
   def persisted?
     false
   end
 
   attr_accessor :name, :company, :address, :city, :state, :zip
+  attr_reader   :errors
 
   validates_each :name, :company, :address, :city, :state, :zip, presence: true
 
@@ -19,6 +21,7 @@ class Shipment
 
   def initialize_with_shipment_params shipment_params
     initialize
+    @errors = ActiveModel::Errors.new(self)
     @name = shipment_params[:name]
     @company = shipment_params[:company]
     @address = shipment_params[:address]
