@@ -14,6 +14,10 @@ class Shipment
 
   validates :name, presence: true
   validates :company, presence: true
+  validates :address, presence: true
+  validates :city, presence: true
+  validates :state, presence: true
+  validates :zip, presence: true
 
   def initialize
 
