@@ -3,6 +3,7 @@ class Shipment
   extend ActiveModel::Naming
   include ActiveModel::Conversion
   include ActiveModel::Model
+  include ActiveModel:Validations
 
   def persisted?
     false
