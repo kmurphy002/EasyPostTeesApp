@@ -5,17 +5,10 @@ class ShipmentsController < ApplicationController
 
   def create
     @shipment = Shipment.new_with_params(shipment_params)
-    @isNameValid = @shipment.valid?
 
-    if @isNameValid == true
+    if @shipment.valid? == true
        @shipment.do_shipment()
     end
-
-
-
-
-
-
     redirect_to root_path()
   end
 
