@@ -4,7 +4,6 @@ class Shipment
   include ActiveModel::Conversion
   include ActiveModel::Model
   include ActiveModel::Validations
-  include ActiveModel::Translations
 
   def persisted?
     false
