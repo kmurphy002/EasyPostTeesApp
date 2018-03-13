@@ -12,7 +12,7 @@ class Shipment
   attr_accessor :name, :company, :address, :city, :state, :zip
   attr_reader   :errors
 
-  validates_each :name, :company, :address, :city, :state, :zip, presence: true
+  validates :name, presence: true
 
   def initialize
 
