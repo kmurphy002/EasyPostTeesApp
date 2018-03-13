@@ -6,7 +6,7 @@ class ShipmentsController < ApplicationController
   def create
     @shipment = Shipment.new_with_params(shipment_params)
 
-    if(@shipment.validates_each? == true){
+    if(@shipment.validates_each == true){
 
     } else {
       @shipment.do_shipment()
