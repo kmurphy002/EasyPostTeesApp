@@ -8,11 +8,12 @@ class ShipmentsController < ApplicationController
 
     if @shipment.valid? == true
        @shipment.do_shipment()
-       flash[:notice] = "Shipment was successfully created"
+       redirect_to root_path()
+       #flash[:notice] = "Shipment was successfully created"
     else
-      flash[:notice] = "Article was unsuccessfully created"   
+      render 'new'
+      flash[:notice] = "Article was unsuccessfully created"
     end
-    redirect_to root_path()
   end
 
   private
