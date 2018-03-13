@@ -5,12 +5,17 @@ class ShipmentsController < ApplicationController
 
   def create
     @shipment = Shipment.new_with_params(shipment_params)
-    @shipment.validates_each
 
-  
+    if(@shipment.validates_each? == true){
+
+    } else {
+      @shipment.do_shipment()
+    }
 
 
-          @shipment.do_shipment()
+
+
+
 
     redirect_to root_path()
   end
