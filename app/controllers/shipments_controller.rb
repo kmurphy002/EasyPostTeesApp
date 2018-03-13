@@ -5,13 +5,13 @@ class ShipmentsController < ApplicationController
 
   def create
     @shipment = Shipment.new_with_params(shipment_params)
-    @shipment.valid?
+    @isNameValid = @shipment.valid?
 
-    #if(@valid == true){
+    if(@isNameValid == true){
        @shipment.do_shipment()
-    #} else {
+    } else {
 
-    #}
+    }
 
 
 
