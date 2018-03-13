@@ -2,11 +2,14 @@ require 'easypost'
 class Shipment
   extend ActiveModel::Naming
   include ActiveModel::Conversion
+  include ActiveModel::Model
 
   def persisted?
     false
   end
 
+  attr_accessor :name, :company, :address, :city, :state, :zip
+=begin
   def name
     @name = ""
   end
@@ -30,7 +33,7 @@ class Shipment
   def zip
     @zip = ""
   end
-
+=end
   def initialize
 
   end
