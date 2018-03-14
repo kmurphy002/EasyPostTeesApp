@@ -8,11 +8,17 @@
 
 <h1>Create A Shipment</h1>
 
-<%= form_for @shipment do |f| %>
-<p>
-  <%= f.label :name %></br>
-  <%= f.text_field :name %>
-</p>
+<%= form_for (@shipment, :html => {class: "form-horizontal", role: "form"}) do |f| %>
+
+<div class="form-group">
+  <div class="control-label col-sm-2">
+     <%= f.label :name %></br>
+  </div>
+
+  <div class="col-sm-8">
+    <%= f.text_field :name, class: "form-control", placeholder: "Title of article", autofocus: true %>
+  </div>
+</div>
 
 <p>
   <%= f.label :company %></br>
