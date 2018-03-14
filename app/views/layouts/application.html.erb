@@ -11,7 +11,7 @@
   <body>
     <%= render 'layouts/navigation' %>
   <div class="container">
-    <% flash.each do |key, value| %>
+    <% flash.success do |key, value| %>
       <div class="alert alert-success" role="alert"><%= value %></div>
     <% end %>
     <%= yield %>
