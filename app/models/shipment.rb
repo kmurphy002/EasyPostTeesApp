@@ -14,7 +14,7 @@ class Shipment
 
   VALID_ADDRESS_REGEX = /\d{1,5}\s(\b\w*\b\s){1,2}\w*\./
   VALID_ZIP_REGEX = /\d{5}/
-  VALID_STATE_REGEX = /^[a-zA-Z]+$/
+  VALID_STATE_REGEX = /\^[a-zA-Z]\+\$/
 
   validates :name, presence: true
   validates :company, presence: true
