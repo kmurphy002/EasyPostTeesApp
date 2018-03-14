@@ -1,20 +1,8 @@
 <% flash.each do |key, value| %>
 <div class="alert alert-danger" role="alert"><%= value %></div>
-<% end %>
-
-<% if @shipment.errors.any? %>
-
-<h2>The following errors prevented the article from getting created</h2>
-
-<ul>
 
 <% @shipment.errors.full_messages.each do |msg| %>
-
-<li><%= msg %></li>
-
-<% end %>
-
-</ul>
+<div class="alert alert-danger" role="alert"><%= msg %></div>
 
 <% end %>
 
