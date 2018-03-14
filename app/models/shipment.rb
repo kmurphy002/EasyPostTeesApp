@@ -14,11 +14,13 @@ class Shipment
 
   VALID_ADDRESS_REGEX = /\d{1,5}\s(\b\w*\b\s){1,2}\w*\./
   VALID_ZIP_REGEX = /\d{5}/
+  VALID_STATE_REGEX = /[a-zA-Z]+/
+
   validates :name, presence: true
   validates :company, presence: true
   validates :address, presence: true, format: { with: VALID_ADDRESS_REGEX } #example of valid address 111 Marsh st.
   validates :city, presence: true
-  validates :state, presence: true, length: { minimum: 2, maximum: 2 }
+  validates :state, presence: true, length: { minimum: 2, maximum: 2 }, format: { with: VALID_STATE_REGEX }
   validates :zip, presence: true, length: { minimum: 5, maximum: 5 }, format: { with: VALID_ZIP_REGEX }
 
   def initialize
