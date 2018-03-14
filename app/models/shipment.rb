@@ -14,7 +14,7 @@ class Shipment
 
   validates :name, presence: true
   validates :company, presence: true
-  validates :address, presence: true
+  validates :address, presence: true, format: {with: \d{1,5}\s(\b\w*\b\s){1,2}\w*\. } #example of valid address 111 Marsh st.
   validates :city, presence: true
   validates :state, presence: true
   validates :zip, presence: true
