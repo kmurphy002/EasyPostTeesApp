@@ -15,39 +15,64 @@
 <%= form_for @shipment, html: {class: "form-horizontal", role: "form"} do |f| %>
 
 <div class="form-group">
-  <div class="control-label">
+  <div class="control-label col-sm-1">
      <%= f.label :name %></br>
   </div>
 
   <div class="col-sm-4">
-    <%= f.text_field :name, class: "form-control", placeholder: "Title of article", autofocus: true %>
+    <%= f.text_field :name, class: "form-control", placeholder: "First & Last Name", autofocus: true %>
   </div>
 </div>
 
-<p>
-  <%= f.label :company %></br>
-  <%= f.text_field :company %>
-</p>
+<div class="form-group">
+  <div class="control-label col-sm-1">
+     <%= f.label :company %></br>
+  </div>
 
-<p>
-  <%= f.label :address %></br>
-  <%= f.text_field :address %>
-</p>
+  <div class="col-sm-4">
+    <%= f.text_field :company, class: "form-control", placeholder: "Your Company Name"%>
+  </div>
+</div>
 
-<p>
-  <%= f.label :city %></br>
-  <%= f.text_field :city %>
-</p>
+<div class="form-group">
+  <div class="control-label col-sm-1">
+     <%= f.label :address %></br>
+  </div>
 
-<p>
-  <%= f.label :state %></br>
-  <%= f.text_field :state %>
-</p>
+  <div class="col-sm-4">
+    <%= f.text_field :address, class: "form-control", placeholder: "ex. 12 Circus Dr."%>
+  </div>
+</div>
 
-<p>
-  <%= f.label :zip %></br>
-  <%= f.text_field :zip %>
-</p>
+<div class="form-group">
+  <div class="control-label col-sm-1">
+     <%= f.label :city %></br>
+  </div>
+
+  <div class="col-sm-4">
+    <%= f.text_field :city, class: "form-control", placeholder: "ex. West Henrietta"%>
+  </div>
+</div>
+
+<div class="form-group">
+  <div class="control-label col-sm-1">
+     <%= f.label :state %></br>
+  </div>
+
+  <div class="col-sm-4">
+    <%= f.text_field :state, class: "form-control", placeholder: "ex. CA"%>
+  </div>
+</div>
+
+<div class="form-group">
+  <div class="control-label col-sm-1">
+     <%= f.label :zip %></br>
+  </div>
+
+  <div class="col-sm-4">
+    <%= f.text_field :zip, class: "form-control", placeholder: "ex. 14586"%>
+  </div>
+</div>
 
 <%= f.submit %>
 
