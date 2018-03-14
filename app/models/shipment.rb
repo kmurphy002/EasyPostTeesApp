@@ -14,7 +14,7 @@ class Shipment
 
   validates :name, presence: true
   validates :company, presence: true
-  VALID_ADDRESS_REGEX = /\d{1,5}\s(\b\w*\b\s){1,2}\w*\.
+  VALID_ADDRESS_REGEX = /\d{1,5}\s(\b\w*\b\s){1,2}\w*\./
   validates :address, presence: true, format: { with: VALID_ADDRESS_REGEX } #example of valid address 111 Marsh st.
   validates :city, presence: true
   validates :state, presence: true
